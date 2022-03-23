@@ -1,3 +1,10 @@
 </br>
-<h2> You are in! </h2>
-<%= link_to "Log Out", destroy_administrator_session_path, method: :delete, class: 'btn btn btn-secondary' if current_administrator %>
+<div class="container d-flex justify-content-center">
+  <row>
+    <h2> You are in! </h2>
+    <%= link_to "Log Out", 
+        destroy_administrator_session_path, 
+        method: :delete, 
+        class: 'btn btn-outline-danger mx-auto d-block' if current_administrator %>
+  </row>
+</div>
