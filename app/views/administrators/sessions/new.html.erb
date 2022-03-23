@@ -1,0 +1,31 @@
+<div class="container-fluid bg-light text-dark">
+  <div class="container justify-content-center">
+    <h2 class="text-center m-3">Log in</h2>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-group mx-auto d-block">
+        <div class="field">
+          <%= f.email_field :email, required: true, class:'form-control mx-auto d-block', placeholder: 'Email address', style:"height: 30px; width: 18rem;" %>
+        </div>
+
+        <div class="field mt-2">
+          <%= f.password_field :password, required: true, class:'form-control mx-auto d-block', placeholder: "Password", style:"height: 30px; width: 18rem;" %>
+        </div>
+
+        <% if devise_mapping.rememberable? %>
+          <div class="field mt-2 col-auto col-form-label ">
+            <col>
+              <%= f.label :remember_me, class:'text-center mx-auto d-block' %>
+              <%= f.check_box :remember_me, class:'mx-auto d-block' %>
+            </col>
+          </div>
+        <% end %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Log in", class: 'btn btn-outline-primary my-2 mx-auto d-block' %>
+      </div>
+    <% end %>
+    <div class="btn my-2 mx-auto d-block">
+        <%= render "administrators/shared/links" %>
+    </div>
+  </div>
+</div>
