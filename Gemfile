@@ -6,7 +6,7 @@ ruby '3.0.1'
 gem 'dotenv-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.1.5'
+gem 'rails', '~> 7.0.2'
 # Use postgreSQL as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
