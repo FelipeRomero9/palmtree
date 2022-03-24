@@ -7,9 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 Product.destroy_all
+Administrator.destroy_all
 
-User.create!(email: 'admin@mail.com', password: '12345678')
+User.create!(email: 'user@mail.com', password: '12345678')
 User.create!(email: 'test_user@mail.com', password: '12345678')
+
+Administrator.create!(email: 'admin@mail.com', password: '12345678')
+Administrator.create!(email: 'test_admin@mail.com', password: '12345678')
 
 Product.create!(name: 'Macbook',
                 description: 'This macbook is the fastest computer of the year, featuring the M1 chip',
