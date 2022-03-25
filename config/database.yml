@@ -1,24 +1,6 @@
 
-development:
+default: &default
   adapter: postgresql
-  encoding: unicode
-  database: sample_postgres_development
-  pool: 5
-  username: <%= ENV.fetch("POSTGRES_USERNAME") %>
-  password: <%= ENV.fetch("POSTGRES_PWD") %>
-
-test:
-  adapter: postgresql
-  encoding: unicode
-  database: sample_postgres_test
-  pool: 5
-  username: <%= ENV.fetch("POSTGRES_USERNAME") %>
-  password: <%= ENV.fetch("POSTGRES_PWD") %>
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: sample_postgres_production
-  pool: 5
-  username: <%= ENV.fetch("POSTGRES_USERNAME") %>
-  password: <%= ENV.fetch("POSTGRES_PWD") %>
+  url: <%= ENV.fetch("DATABASE_URL") %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000

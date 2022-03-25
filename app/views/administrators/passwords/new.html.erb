@@ -1,0 +1,17 @@
+<div class="container-fluid bg-light text-dark m-2">
+  <div class="container justify-content-center">
+    <h2 class="text-center m-3">Forgot your password?</h2>
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <%= render "administrators/shared/error_messages", resource: resource %>
+      <div class="field">
+        <%= f.email_field :email, required: true, class:'form-control mx-auto d-block', placeholder: 'Email address', style:"height: 30px; width: 18rem;" %>
+      </div>
+      <div class="actions mt-3">
+        <%= f.submit "Send me reset password instructions", class: 'btn btn-outline-primary my-2 mx-auto d-block' %>
+      </div>
+    <% end %>
+    <div class="btn my-2 mx-auto d-block">
+      <%= render "administrators/shared/links" %>
+    </div>
+  </div>
+</div>
