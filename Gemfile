@@ -28,6 +28,8 @@ gem 'devise'
 
 gem 'jwt'
 
+gem 'rubocop', require: false
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
